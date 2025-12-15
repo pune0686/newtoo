@@ -12,7 +12,7 @@ steps:
     provider: 'azurerm'
     command: 'init'
     backendServiceArm: 'SCN_PRIME'
-    backendAzureRmStorageAccountName: 'mystgforpipe1'
+    backendAzureRmStorageAccountName: 'mystgforpipe12'
     backendAzureRmContainerName: 'mycontain1'
     backendAzureRmKey: 'pipecicd.tfstate'
 - task: TerraformTask@5
