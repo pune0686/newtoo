@@ -1,15 +1,21 @@
 terraform {
   required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "4.37.0"
     }
+  }
+  backend "azurerm" {
+    resource_group_name  = "myrgforpipe"
+    storage_account_name = "mystgforpipe12"
+    container_name       = "mycontain1"
+    key                  = "pipecicd.tfstate"
   }
 }
 
 provider "azurerm" {
   features {}
-  subscription_id = "25a58ceb-2570-42e2-9d35-00b46979c51a"
+  subscription_id = "711f9f70-1892-49fb-a04f-5bf2c5a89677"
 }
 
 resource "azurerm_resource_group" "rgpipe"{
